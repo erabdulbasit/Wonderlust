@@ -101,6 +101,9 @@ app.use((req,res,next) => {
 // })
 
 //routes
+app.get('/', (req, res) => {
+  res.redirect('/listings');
+});
 app.use("/listings",listingRouter)
 app.use('/listings/:id/reviews', reviewsRouter)
 app.use('/',userRouter)
